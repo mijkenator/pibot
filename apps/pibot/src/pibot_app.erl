@@ -12,10 +12,11 @@
 start(_StartType, _StartArgs) ->
     Dispatch = cowboy_router:compile([
         {'_', [
-            {"/", pibot_handler, []}
+            {"/api/[...]", pibot_handler, []}
+            ,{"/[...]", cowboy_static, {dir, "../../priv_dir/html", [{mimetypes, cow_mimetypes, all}]}}
         ]}
     ]),
-    {ok, _} = cowboy:start_http(http, 10, [{port, 2345}], [
+    {ok, _} = cowboy:start_http(http, 50, [{port, 2345}], [
         {env, [{dispatch, Dispatch}]}
     ]),
     ex_reloader:start(),
