@@ -1,0 +1,15 @@
+{application, pibot,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                  ,lager
+                  ,cowboy
+                  ,ex_reloader
+                 ]},
+  {mod, { pibot_app, []}},
+  {env, []}
+ ]}.

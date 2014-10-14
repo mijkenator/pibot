@@ -1,0 +1,9 @@
+.eunit
+*.beam
+ebin
+doc
+deps/*
+*.swp
+erl_crash.dump
+rel/pibot/
+log/*
