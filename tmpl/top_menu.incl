@@ -1,0 +1,16 @@
+<!-- vim:syn=html -->
+		<!-- Header -->
+			<header id="header" class="skel-layers-fixed">
+				<h1><a href="#">RasperryPi Bot</a></h1>
+				<nav id="nav">
+					<ul>
+						<li id="n1"><a href="#top">Top</a></li>
+						<li id="n2"><a href="#">M1:0</a></li>
+						<li id="n3"><a href="#">M2:0</a></li>
+						<li id="n4"><a href="#">M3:0</a></li>
+						<li id="n5"><a href="#">M4:0</a></li>
+						<li><a href="#tst"> </a></li>
+						<li><a href="#" class="button special">[]</a></li>
+					</ul>
+				</nav>
+			</header>

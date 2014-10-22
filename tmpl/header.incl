@@ -1,0 +1,18 @@
+<!-- vim:syn=html -->
+<html>
+<head>
+    <script src="/js/jquery.min.js"></script> <!-- 2.1.1 -->
+    <script src="/js/json2.js"></script>
+    <script src="/js/skel.min.js"></script>
+	<script src="/js/skel-layers.min.js"></script>
+    <script src="/js/underscore-min.js"></script> <!-- 1.7.0 -->
+	<script src="/js/init.js"></script>
+    <script src="/js/backbone-min.js"></script> <!-- 1.1.2 -->
+    <script src="/js/utils.js"></script>
+    <script>
+        skel.init();
+    </script>
+    <TMPL_LOOP NAME=PAGE_AUTO_SCRIPTS><script src="<TMPL_VAR NAME=SNAME>"></script>
+    </TMPL_LOOP>
+</head>
+<body>

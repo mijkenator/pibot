@@ -1,5 +1,39 @@
-<TMPL_INCLUDE NAME="header.incl">
-<TMPL_INCLUDE NAME="top_menu.incl">
+<!-- vim:syn=html -->
+<html>
+<head>
+    <script src="/js/jquery.min.js"></script> <!-- 2.1.1 -->
+    <script src="/js/json2.js"></script>
+    <script src="/js/skel.min.js"></script>
+	<script src="/js/skel-layers.min.js"></script>
+    <script src="/js/underscore-min.js"></script> <!-- 1.7.0 -->
+	<script src="/js/init.js"></script>
+    <script src="/js/backbone-min.js"></script> <!-- 1.1.2 -->
+    <script src="/js/utils.js"></script>
+    <script>
+        skel.init();
+    </script>
+    <script src="/js/index_page/1_auto.js"></script>
+    
+</head>
+<body>
+
+<!-- vim:syn=html -->
+		<!-- Header -->
+			<header id="header" class="skel-layers-fixed">
+				<h1><a href="#">RasperryPi Bot</a></h1>
+				<nav id="nav">
+					<ul>
+						<li id="n1"><a href="#top">Top</a></li>
+						<li id="n2"><a href="#">M1:0</a></li>
+						<li id="n3"><a href="#">M2:0</a></li>
+						<li id="n4"><a href="#">M3:0</a></li>
+						<li id="n5"><a href="#">M4:0</a></li>
+						<li><a href="#tst"> </a></li>
+						<li><a href="#" class="button special">[]</a></li>
+					</ul>
+				</nav>
+			</header>
+
 <div class="container">
     <div class="6u">
         <div id="mkh_nav_buttons" class="grid-demo">
@@ -39,4 +73,6 @@
     </div>
 </div>
 
-<TMPL_INCLUDE NAME="footer.incl">
+</body>
+</html>
+
