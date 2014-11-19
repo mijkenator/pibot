@@ -13,17 +13,20 @@ start() ->
 
 
 move(<<"s">>)   -> 
-    brickpi:set_motor_speed(?PORT_A, 0),
-    brickpi:set_motor_speed(?PORT_B, 0),
-    brickpi:update();
+   % brickpi:set_motor_speed(?PORT_A, 0),
+   % brickpi:set_motor_speed(?PORT_B, 0),
+   % brickpi:update(),
+    ok;
 move(<<"l">>)   -> ok;
 move(<<"r">>)   -> ok;
 move(<<"fwd">>) -> 
-    brickpi:set_motor_speed(?PORT_A,-200),
-    brickpi:set_motor_speed(?PORT_B,-200),
-    brickpi:update();
+   % brickpi:set_motor_speed(?PORT_A,-200),
+   % brickpi:set_motor_speed(?PORT_B,-200),
+   % brickpi:update(),
+    ok;
 move(<<"bwd">>) ->
-    brickpi:set_motor_speed(?PORT_A, 200),
-    brickpi:set_motor_speed(?PORT_B, 200),
-    brickpi:update();
+   % brickpi:set_motor_speed(?PORT_A, 200),
+   % brickpi:set_motor_speed(?PORT_B, 200),
+   % brickpi:update(),
+    ok;
 move(_) -> ok.

@@ -3,7 +3,7 @@
 -behaviour(supervisor).
 
 %% API
--export([start_link/0]).
+-export([start_link/0, start_link/1]).
 
 %% Supervisor callbacks
 -export([init/1]).
@@ -18,10 +18,15 @@
 start_link() ->
     supervisor:start_link({local, ?MODULE}, ?MODULE, []).
 
+start_link(ExtProg) ->
+    supervisor:start_link({local, ?MODULE}, ?MODULE, ExtProg).
+
 %% ===================================================================
 %% Supervisor callbacks
 %% ===================================================================
 
-init([]) ->
-    {ok, { {one_for_one, 5, 10}, []} }.
+init(ExtProg) ->
+    {ok, { {one_for_one, 5, 10}, [
+            {robot_port_gs, {robot_port_gs, start_link, [ExtProg]}, permanent, 10, worker, [robot_port_gs]}
+    ]} }.
 

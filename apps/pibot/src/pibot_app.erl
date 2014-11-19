@@ -20,7 +20,10 @@ start(_StartType, _StartArgs) ->
         {env, [{dispatch, Dispatch}]}
     ]),
     ex_reloader:start(),
-    pibot_sup:start_link().
+    PrivDir = code:priv_dir(pibot),
+    {ok, ExtProg} = application:get_env(pibot, extprog),
+    pibot_sup:start_link(filename:join([PrivDir, ExtProg])).
+    %pibot_sup:start_link().
 
 stop(_State) ->
     ok.

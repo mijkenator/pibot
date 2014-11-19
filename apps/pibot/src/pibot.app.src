@@ -12,5 +12,6 @@
                   ,gproc
                  ]},
   {mod, { pibot_app, []}},
-  {env, []}
+  %{env, []}
+  {env, [{extprog, "robot.py"}, {timeout, 3000}, {maxline, 100}]}
  ]}.
